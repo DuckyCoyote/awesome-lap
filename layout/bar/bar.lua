@@ -22,6 +22,8 @@ local temp = require('widgets.temp')
 local taglist = require('layout/bar/.taglist')
 local bluetooth = require("gobo.awesome.bluetooth")
 
+local vm_widget = require("widgets/.vmware")
+
 -- Functions
 local add_margin = require('layout/.add-margin')
 local baritems = require('layout/bar/.baritems')
@@ -79,6 +81,14 @@ awful.screen.connect_for_each_screen(function(s)
 			spacing = 10,
 			layout = wibox.layout.fixed.horizontal
 		}, 10, 10, 0, 0), '#242424', widget_shape)
+	
+	local vm_border = wibox.container.background(
+		wibox.container.margin(wibox.widget {
+			vm_widget,
+			spacing = 10,
+			layout = wibox.layout.fixed.horizontal
+		}, 10, 10, 0, 0), '#242424', widget_shape
+	)
 
 	local left_widgets = wibox.widget {
 		add_margin(cpu_border, 7),
@@ -130,6 +140,7 @@ awful.screen.connect_for_each_screen(function(s)
 			nil,
 			{       -- Right Items
 
+				add_margin(vm_border, 7),
 				add_margin(last_widgets, 8),
 				add_margin(info_widgets, 7),
 				add_margin(volume_widget, 7),

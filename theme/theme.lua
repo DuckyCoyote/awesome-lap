@@ -10,7 +10,7 @@ local themes_path = gfs.get_themes_dir()
 local theme = {}
 
 -- theme.font = "Hack Nerd Font Bold 11"
-theme.font = "Cartograph CF 11"
+theme.font = "Fira Code Nerd Font Bold 10"
 
 theme.wallpaper = '/home/duckycoyote/wallcastle.jpg'
 
@@ -32,8 +32,8 @@ theme.hotkeys_modifiers_fg = color.light_active
 
 theme.border_width = dpi(2)
 -- theme.border_normal = color.dark_inactive
-theme.border_focus = '#0094FA'
-theme.border_normal = '#FF7070'
+theme.border_focus = '#2d3640'
+theme.border_normal = '#15191e'
 
 -- Menu Colors
 

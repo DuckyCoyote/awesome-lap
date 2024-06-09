@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Verificar si se proporcionaron dos argumentos
+if [ "$#" -ne 2 ]; then
+    echo "Uso: setvm <osname> <ip>"
+    exit 1
+fi
+
+# Obtener los argumentos
+osname=$1
+ip=$2
+
+# Ruta al archivo
+file_path="$HOME/.config/awesome/widgets/vm.txt"
+
+# Escribir en el archivo
+echo "$osname $ip" > "$file_path"
