@@ -32,7 +32,8 @@ local get_taglist = function(s)
 	local unfocus_color = "#C2CFDB"
 
 	local empty_icon = " "
-	local empty_color = "#7eadcf"
+	-- local empty_color = "#7eadcf"
+	local empty_color = "#89B4F9"
 
 	local focus_icon = "󰮯 "
 	local focus_color = "#fabd2f" --[["#FFC300"]]

@@ -30,10 +30,11 @@ theme.fg_focus = color.light_active
 theme.hotkeys_fg = color.light
 theme.hotkeys_modifiers_fg = color.light_active
 
-theme.border_width = dpi(2)
+theme.border_width = dpi(3)
 -- theme.border_normal = color.dark_inactive
-theme.border_focus = '#2d3640'
-theme.border_normal = '#15191e'
+-- theme.border_focus = '#2d3640'
+theme.border_focus = '#89B4F9'
+theme.border_normal = '#2d3640'
 
 -- Menu Colors
 

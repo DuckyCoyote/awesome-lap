@@ -115,7 +115,8 @@ awful.screen.connect_for_each_screen(function(s)
 	s.mywibox = awful.wibar({
 		position = "top",
 		screen = s,
-		height = dpi(38)
+		height = dpi(38),
+		-- margins = { top = dpi(8), left = dpi(8), right = dpi(8), bottom = 0}
 		-- width = dpi(1890)
 		--	border_width = 7
 		-- shape = roundedw wshape
@@ -124,7 +125,7 @@ awful.screen.connect_for_each_screen(function(s)
 	s.mywibox:setup {
 		{
 			{       -- Left Items
-				wibox.container.margin(dashboard, 15, 7, 8, 8),
+				wibox.container.margin(dashboard, 15, 15, 9, 9),
 				left_widgets,
 				add_margin(temp_border, 7),
 				-- add_margin(s.mytasklist, 10),

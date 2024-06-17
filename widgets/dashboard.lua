@@ -1,6 +1,6 @@
 local wibox = require('wibox')
 local gfs = require("gears.filesystem")
-local icon = gfs.get_configuration_dir() .. '/icons/arch_logo.png'
+local icon = gfs.get_configuration_dir() .. '/icons/awesome-config-logo.jpg'
 local awful = require('awful')
 local gears = require('gears')
 local cpu = require('vicious.widgets.cpu_linux')
