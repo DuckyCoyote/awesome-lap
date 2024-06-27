@@ -101,7 +101,7 @@ awful.rules.rules = rulesaws
 -- Signals
 require('meta.signals')
 
-os.execute('feh --bg-fill ~/.config/awesome/wall/as-wall.jpg')
+os.execute('feh --bg-fill ~/.config/awesome/wall/hyprland_kitty.jpeg')
 -- https://www.pxfuel.com/en/desktop-wallpaper-jbjjt
 -- https://gruvbox-wallpapers.pages.dev/
 -- https://www.google.com/search?q=gruvbox+dark+wallpaper&tbm=isch&ved=2ahUKEwjBmf-y_pKCAxViyMkDHYn6BLIQ2-cCegQIABAA&oq=gruvbox+dark+wallpaper&gs_lcp=CgNpbWcQAzIHCAAQExCABDoHCAAQigUQQzoICAAQgAQQsQM6BQgAEIAEOgQIABAeOgYIABAIEB46BggAEB4QE1DCCFiqJ2DSJ2gBcAB4AIABTogBmQySAQIyM5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=9vk5ZcHGF-KQp84PifWTkAs&bih=858&biw=1884&client=firefox-b-d#imgrc=zMR8oQSSXujrHM&imgdii=li4ebm8ZpCFCeM

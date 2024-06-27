@@ -21,6 +21,8 @@ local bat = require('widgets.battery')
 local temp = require('widgets.temp')
 local taglist = require('layout/bar/.taglist')
 local bluetooth = require("gobo.awesome.bluetooth")
+local media_widget = require("widgets.media")
+local power = require("widgets.power")
 
 local vm_widget = require("widgets/.vmware")
 
@@ -90,6 +92,14 @@ awful.screen.connect_for_each_screen(function(s)
 		}, 10, 10, 0, 0), '#242424', widget_shape
 	)
 
+	local power_spoti = wibox.container.background (
+		wibox.container.margin (wibox.widget {
+		add_margin(media_widget, 3),
+		add_margin(power, 3),
+		spacing = 3,
+		layout = wibox.layout.fixed.horizontal
+	}, 10, 10, 0, 0), '#242424', widget_shape )
+
 	local left_widgets = wibox.widget {
 		add_margin(cpu_border, 7),
 		add_margin(hdd_border, 7),
@@ -100,7 +110,7 @@ awful.screen.connect_for_each_screen(function(s)
 	local last_widgets = wibox.container.background(
 		wibox.container.margin(wibox.widget {
 			weather_widget({
-				api_key = '74506808e69308bd700962204ad7fecf',
+				api_key = 'a277c8fb7aef84fe2e1cbc8f8782f832',
 				coordinates = { 19.6997, -99.1475 },
 				font_name = 'Carter One',
 				icons = 'VitalyGorbachev',
@@ -140,10 +150,10 @@ awful.screen.connect_for_each_screen(function(s)
 			},
 			nil,
 			{       -- Right Items
-
 				add_margin(vm_border, 7),
-				add_margin(last_widgets, 8),
+				-- add_margin(last_widgets, 8),
 				add_margin(info_widgets, 7),
+				add_margin(power_spoti, 7),
 				add_margin(volume_widget, 7),
 				add_margin(s.mylayoutbox, 10),
 				layout = wibox.layout.fixed.horizontal

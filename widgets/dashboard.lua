@@ -87,7 +87,7 @@ local phrase_widget = wibox.widget {
   {
     text = ' ~ Gladiador ~ ',
     font = 'FiraCode Nerd Font 20',
-    align = 'center',
+  align = 'center',
     widget = wibox.widget.textbox
   },
   forced_height = 300,
@@ -137,11 +137,15 @@ local dash_pop = awful.popup {
   },
   ontop         = true,
   maximum_width = 1800,
-  --bg            = "#303030",
+  bg            = "#3030300",
   border_color  = '#242424',
   border_width  = 2,
-  placement     = awful.placement.centered,
-  visible       = false
+  visible       = false,
+  offset = {y = 5},
+  hide_on_right_click = true,
+  placement = function(c)
+    (awful.placement.top_left)(c, {margins = {top = 50, left = 10}})
+  end
 }
 
 dash_pop:setup({
